@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    /* PRIMARY COLORS*/
+    --SOFT-BLUE: hsl(215, 51%, 70%);
+    --CYAN: hsl(178, 100%, 50%);
+
+    /* NEUTRAL COLORS*/
+    --VERY-DARK-BLUE-MAIN-BG:hsl(215.6,55.2%,11%);
+    --VERY-DARK-BLUE-CARD-BG: hsl(213.5,51.8%,16.3%);
+    --VERY-DARK-BLUE-LINE: hsl(216, 50%, 16%);
+    --WHITE: hsl(0, 0%, 100%);
+}
+
+/* || RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* || GENERAL STYLES */
+
+html {
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-color: #0D1A2D;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+p {
+    color: var(--SOFT-BLUE);
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: left;
+}
+
+h1 {
+    font-size: 1.2rem;
+    margin: 1.1rem 0 1.1rem 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:active {
+    color: var(--CYAN);
+    cursor: pointer;
+}
+
+span {
+    display: flex;
+    align-items: center;
+}
+
+/* || COMPONENTS*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--VERY-DARK-BLUE-CARD-BG);
+    border-radius: 1rem;
+    box-shadow: #0C172A 0px 0px 0px 1rem, #0C192C 0px 0px 0px 2rem;
+    padding: 1.35rem;
+    text-align: left;
+}
+
+.container__logo{
+    position: relative;
+}
+
+.container__logo a:active::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    border-radius: 1rem;
+    transition: 1s;
+}
+
+.container__logo a:active + img {
+    visibility: visible;
+}
+
+.img__logo{
+    width: 300px;
+    max-height: 300px;
+    border-radius: 0.5rem;
+}
+
+.logo__overlay {
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container__main {
+    max-width: 300px;
+}
+
+.offer {
+    margin: 1.5rem 0 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    color: var(--SOFT-BLUE);
+    font-size: 0.9rem;
+}
+
+.offer__value {
+    color: var(--CYAN);
+}
+
+/* || COMPONENTS BOTTOM PART */
+
+.creator {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    padding-top: 0.8em;
+    padding-bottom: 0.4em;
+    border-top: 1px solid rgb(139,172,218, .5);
+}
+
+.creator__img {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 0.5rem;
+}
+
+.creator p {
+    font-size: 0.9rem;
+}
